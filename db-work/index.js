@@ -45,7 +45,7 @@ let user = {
   name: "Maria",
   password: "bdhsdjls",
   role: "admin",
-  age: 28,
+  age: 25,
 };
 
 // userModel
@@ -97,11 +97,38 @@ let user = {
 //     console.log(err);
 //   });
 
+// userModel
+//   .find()
+//   .limit(2)
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// userModel
+//   .deleteOne({ age: 25 })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// userModel
+//   .deleteMany({ age: 25 })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
 userModel
-  .find()
-  .limit(2)
-  .then((data) => {
-    console.log(data);
+  .updateOne({ name: "Maria" }, { age: 30 })
+  .then((info) => {
+    console.log(info);
   })
   .catch((err) => {
     console.log(err);
