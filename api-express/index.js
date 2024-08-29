@@ -17,6 +17,7 @@ mongoose
     console.log(err);
   });
 
+//coding realted to products
 //Product Schema
 const productSchema = mongoose.Schema(
   {
@@ -97,6 +98,7 @@ app.delete("/products/:id", (req, res) => {
     });
 });
 
+//update product
 app.put("/products/:id", (req, res) => {
   let product = req.body;
   productModel
